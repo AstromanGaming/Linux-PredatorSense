@@ -127,32 +127,32 @@ def applyUndervolt(self, core, cache):
 voltage_process = QProcess()
 ## Update the current VCore
 def checkVoltage(self):
-    # process = QProcess()
-    # process.start('sudo rdmsr 0x198 -p 0 -u --bitfield 47:32') # Processor 0
-    # # process.start('sudo rdmsr 0x198 -a -u --bitfield 47:32') # All processors
-    # process.waitForStarted()
-    # process.waitForFinished()
-    # process.waitForReadyRead()
-    # voltage = process.readAll()
-    # process.close()
-
-    ## https://askubuntu.com/questions/876286/how-to-monitor-the-vcore-voltage
-    voltage_process.start('sudo rdmsr 0x198 -a -u --bitfield 47:32') # All processors 
+    voltage_process.start('sudo rdmsr 0x198 -a -u --bitfield 47:32')  # All processors
     voltage_process.waitForFinished()
     voltage = voltage_process.readAll()
 
     if voltage:
-        data = [int(line) for line in voltage.data().decode('utf-8').splitlines()]
-        # print(data)
-        avg_v = sum(data) / len(data)
-        voltage = int(avg_v) / 8192
+        lines = voltage.data().decode('utf-8').splitlines()
+        data = []
+        for line in lines:
+            try:
+                # Extract the numeric part after the colon
+                value = int(line.split(':')[1].strip())
+                data.append(value)
+            except (IndexError, ValueError):
+                print(f"Skipping malformed line: {line}")
+                continue
 
-        self.voltage = voltage
+        if data:
+            avg_v = sum(data) / len(data)
+            voltage = int(avg_v) / 8192
 
-        if voltage < self.minrecordedVoltage:
-            self.minrecordedVoltage = voltage
-        if voltage > self.maxrecordedVoltage:
-            self.maxrecordedVoltage = voltage
+            self.voltage = voltage
+
+            if voltage < self.minrecordedVoltage:
+                self.minrecordedVoltage = voltage
+            if voltage > self.maxrecordedVoltage:
+                self.maxrecordedVoltage = voltage
 
 ##------------------------------##
 ##-------Main QT Window---------##
