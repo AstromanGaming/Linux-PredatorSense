@@ -7,4 +7,4 @@ Type=Application
 Terminal=false
 Exec=sh -c "pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY sh -c 'cd /path/of/the/software/ && python3 main.py'"
 Comment=Application to control fan speed for Acer Predator Helios 300
-Icon=/path/of/the/software/
+Icon=/path/of/the/software/app_icon.ico
