@@ -1,6 +1,6 @@
 #### _(Under development)_
 
-# This is a fork of [Linux-PredatorSense by snowyoneill](https://github.com/snowyoneill/Linux-PredatorSense)
+# This is a Derived Project of [Linux-PredatorSense by snowyoneill](https://github.com/snowyoneill/Linux-PredatorSense)
 
 *PH315-54-760S Compilant Only*
 
