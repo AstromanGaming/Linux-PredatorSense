@@ -5,10 +5,10 @@
 *PH315-54-760S Compilant Only*
 
 # Q&A
-### Why did I create this fork?
+### Why did I create this Derived Project?
 Quite simply, I'd like to add my own ideas without changing the original project.
 ##
-### What are the future changes in this fork?
+### What are the future changes in this Derived Project?
 1. Add support for [GameMode by FeralInteractive](https://github.com/FeralInteractive/gamemode?tab=BSD-3-Clause-1-ov-file#readme)
 2. Find an alternative or a tweak to ```msr-tools``` and ```undervolt``` for Secure Boot support.
 3. Pre-compiled built file
