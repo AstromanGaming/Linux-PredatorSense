@@ -2,7 +2,7 @@
 
 # This is a Derived Project of [Linux-PredatorSense by snowyoneill](https://github.com/snowyoneill/Linux-PredatorSense)
 
-*PH315-54-760S Compilant Only*
+*PH315-54-760S Only*
 
 # Q&A
 ### Why did I create this Derived Project?
