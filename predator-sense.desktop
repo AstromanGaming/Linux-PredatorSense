@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=Linux PredatorSense
-StartupWMClass=Linux PredatorSense
+Name=Linux-PredatorSense
+StartupWMClass=Linux-PredatorSense
 Encoding=UTF-8
-Version=1.0
+Version=1.0.0
 Type=Application
 Terminal=false
 Exec=sh -c "pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY sh -c 'cd /path/of/the/software/ && python3 main.py'"
-Comment=Application to control fan speed for Acer Predator Helios 300
+Comment=Application to control fan speed for the Acer Predator Helios 300 (2021).
 Icon=/path/of/the/software/app_icon.ico
