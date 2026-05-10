@@ -1,4 +1,4 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 set -euo pipefail
 
 SOFT_DIR="/opt/Linux-PredatorSense/"
