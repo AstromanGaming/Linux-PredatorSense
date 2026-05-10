@@ -36,4 +36,7 @@ sudo cat /dev/ec 2>/dev/null | head -c 64 | hexdump -C || true
 echo
 echo "=== acpi_ec module installation script completed ==="
 
+systemctl daemon-reload
+systemctl enable predator-sense.service || true
+
 exit 0

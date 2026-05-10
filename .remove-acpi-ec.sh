@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+systemctl enable predator-sense.service || false
+systemctl daemon-reload
+
 echo "=== Removing acpi_ec module and cleaning up ==="
 
 # Unload the module if loaded

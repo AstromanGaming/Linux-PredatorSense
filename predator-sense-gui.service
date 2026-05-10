@@ -1,0 +1,11 @@
+[Unit]
+Description=Linux-PredatorSense GUI (User Mode)
+After=graphical-session.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/Linux-PredatorSense/
+ExecStart=/opt/Linux-PredatorSense/wrapper.sh
+
+[Install]
+WantedBy=default.target

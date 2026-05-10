@@ -1,0 +1,18 @@
+[Unit]
+Description=Linux-PredatorSense HotKey Monitor
+After=graphical.target
+Wants=graphical.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/Linux-PredatorSense/
+ExecStartPre=/opt/Linux-PredatorSense/prepare_xenv.sh
+ExecStart=/usr/bin/python3 /opt/Linux-PredatorSense/monitor_evdev.py
+Restart=on-failure
+RestartSec=2
+StandardOutput=journal
+StandardError=journal
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
