@@ -1,0 +1,13 @@
+# /home/your_username/.config/systemd/user/predator-sense-gui.service 
+
+[Unit]
+Description=Linux-PredatorSense GUI (User Mode)
+After=graphical-session.target
+
+[Service]
+Type=simple
+WorkingDirectory=/path/of/the/software/
+ExecStart=/path/of/the/software/wrapper.sh
+
+[Install]
+WantedBy=default.target
