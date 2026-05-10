@@ -1,4 +1,4 @@
-# /etc/systemd/system/predator-sense.service 
+# /etc/systemd/system/predator-sense.service
 
 [Unit]
 Description=Linux-PredatorSense HotKey Monitor

@@ -1,4 +1,4 @@
-# /home/your_username/.config/systemd/user/predator-sense-gui.service 
+# /home/your_username/.config/systemd/user/predator-sense-gui.service
 
 [Unit]
 Description=Linux-PredatorSense GUI (User Mode)

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# /opt/Linux-PredatorSense/monitor_evdev.py
+# /path/of/the/software/monitor_evdev.py
 from evdev import InputDevice, ecodes
 import subprocess, time, os, sys
 
