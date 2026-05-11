@@ -31,6 +31,7 @@ sudo fpm -s dir -t deb \
   --depends python3-evdev \
   "$SCRIPT_DIR/.remove-acpi-ec.sh=/opt/Linux-PredatorSense/.remove-acpi-ec.sh" \
   "$SCRIPT_DIR/.install-acpi-ec.sh=/opt/Linux-PredatorSense/.install-acpi-ec.sh" \
+  "$SCRIPT_DIR/app_icon.ico=/opt/Linux-PredatorSense/app_icon.ico" \
   "$SCRIPT_DIR/monitor_evdev.py=/opt/Linux-PredatorSense/monitor_evdev.py" \
   "$SCRIPT_DIR/prepare_xenv.sh=/opt/Linux-PredatorSense/prepare_xenv.sh" \
   "$SCRIPT_DIR/wrapper.sh=/opt/Linux-PredatorSense/wrapper.sh" \
