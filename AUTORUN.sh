@@ -16,21 +16,22 @@ echo "[2/3] Building main package..."
 
 sudo fpm -s dir -t deb \
   -n linux-predatorsense \
-  -v 1.1.0 \
+  -v 1.1.1 \
   --vendor "AstromanGaming" \
   --maintainer "Sam Bélanger <contact@astromangaming.ca>" \
   --license "GPL-3.0" \
   --url "https://github.com/AstromanGaming/Linux-PredatorSense/" \
   --description "A derived project clone of Acer's Predator Sense™ application for Linux" \
   --architecture amd64 \
-  --before-remove "$SCRIPT_DIR/.remove-acpi-ec.sh" \
-  --after-install "$SCRIPT_DIR/.install-acpi-ec.sh" \
+  --before-remove "$SCRIPT_DIR/.remove.sh" \
+  --after-install "$SCRIPT_DIR/.install.sh" \
   --depends python3-pyqt5 \
   --depends python3-pyqt5.qtchart \
   --depends msr-tools \
   --depends python3-evdev \
-  "$SCRIPT_DIR/.remove-acpi-ec.sh=/opt/Linux-PredatorSense/.remove-acpi-ec.sh" \
-  "$SCRIPT_DIR/.install-acpi-ec.sh=/opt/Linux-PredatorSense/.install-acpi-ec.sh" \
+  "$SCRIPT_DIR/.remove.sh=/opt/Linux-PredatorSense/.remove.sh" \
+  "$SCRIPT_DIR/.install.sh=/opt/Linux-PredatorSense/.install.sh" \
+  "$SCRIPT_DIR/wait_for_graphical_session.sh=/opt/Linux-PredatorSense/wait_for_graphical_session.sh" \
   "$SCRIPT_DIR/app_icon.ico=/opt/Linux-PredatorSense/app_icon.ico" \
   "$SCRIPT_DIR/monitor_evdev.py=/opt/Linux-PredatorSense/monitor_evdev.py" \
   "$SCRIPT_DIR/prepare_xenv.sh=/opt/Linux-PredatorSense/prepare_xenv.sh" \
