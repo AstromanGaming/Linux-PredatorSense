@@ -2,12 +2,13 @@
 
 [Unit]
 Description=Linux-PredatorSense HotKey Monitor
-After=graphical.target
-Wants=graphical.target
+After=systemd-user-sessions.service
+After=display-manager.service
 
 [Service]
 Type=simple
 WorkingDirectory=/path/of/the/software/
+ExecStartPre=/path/of/the/software/wait_for_graphical_session.sh
 ExecStartPre=/path/of/the/software/prepare_xenv.sh
 ExecStart=/usr/bin/python3 /path/of/the/software/monitor_evdev.py
 Restart=on-failure

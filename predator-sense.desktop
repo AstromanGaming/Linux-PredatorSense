@@ -2,7 +2,7 @@
 Name=Linux PredatorSense
 StartupWMClass=Linux PredatorSense
 Encoding=UTF-8
-Version=1.1.0
+Version=1.1.1
 Type=Application
 Terminal=false
 Exec=/path/of/the/software/wrapper.sh
